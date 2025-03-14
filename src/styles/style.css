@@ -1,0 +1,141 @@
+/*---------------------------------------------
+  Fonts
+---------------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+/*---------------------------------------------
+  Utility
+---------------------------------------------*/
+
+* {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+:root {
+  --background: #C0D6DF;
+  --primary: #166088;
+  --secondary: #4A6FA5;
+  --accent: #1e364a;
+  --accent2: #DBE9EE;
+  --filter: brightness(13.5%) saturate(0);
+}
+
+body {
+    background: var(--background);
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px; /* Base font size */
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+}
+
+/*---------------------------------------------
+  Header
+---------------------------------------------*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    z-index: 9999;
+}
+  
+header .navbar {
+    background: radial-gradient(circle, var(--secondary) 0%, var(--primary) 100%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 20px;
+}
+  
+header .navbar .navbar-brand {
+    padding: 0;
+}
+  
+header .navbar .navbar-brand img {
+    height: 40px;
+    width: 40px;
+}
+  
+header .navbar .navbar-nav {
+    width: 100%;
+    gap: 10px;
+}
+  
+header .navbar .navbar-nav .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+header .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: #d5d5d5;
+    text-transform: uppercase;
+    padding: 5px 20px !important;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+  
+header .navbar .navbar-nav .nav-item .nav-link:hover {
+    background-color: var(--accent);
+    color: #d5d5d5;
+}
+  
+header .navbar .navbar-nav .nav-item .nav-link.active {
+    background-color: var(--accent);
+    color: #ffffff !important;
+}
+  
+header .navbar .access-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    gap: 15px;
+    background: var(--accent2);
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-left: auto;
+    transition: all 0.3s;
+}
+  
+header .navbar .access-button:active {
+    box-shadow: none;
+    transform: translateY(4px);
+}
+  
+header .navbar .access-button svg {
+    width: 20px;
+    fill: var(--primary);
+}
+  
+header .navbar .access-button span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary);
+}
+  
+@media screen and (max-width: 767px) {
+    header .navbar .navbar-nav {
+      margin-top: 20px;
+    }
+  
+    header .navbar .navbar-nav .nav-item .nav-link {
+      width: 100%;
+      text-align: center;
+    }
+  
+    header .navbar .access-button {
+      align-self: unset;
+      margin-left: unset;
+    }
+}
