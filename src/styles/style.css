@@ -189,7 +189,6 @@ header .navbar .access-button span {
     margin-top: 1rem;
 }
 
-/* Responsive per dispositivi mobile */
 @media (max-width: 768px) {
     .hero-img {
         height: 500px;
@@ -209,3 +208,94 @@ header .navbar .access-button span {
     }
 }
 
+/*---------------------------------------------
+  Indirizzi
+---------------------------------------------*/
+.indirizzi {
+    padding: 3rem 0;
+    margin: 2rem 0;
+}
+
+.indirizzo-card {
+    width: 100%;
+    min-height: 250px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    padding: 2rem 1rem;
+}
+
+.indirizzo-card:hover {
+    transform: translateY(-10px);
+}
+
+.indirizzo-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.indirizzo-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.indirizzo-card p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.grafica { background-color: #dc2626; }
+.elettrotecnica { background-color: #d97706; }
+.informatica { background-color: #059669; }
+
+@media (max-width: 767px) {
+    .indirizzo-card {
+        min-height: 200px;
+    }
+    
+    .indirizzo-card img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .indirizzo-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+
+/*---------------------------------------------
+  Servizi
+---------------------------------------------*/
+.sezione-servizi {
+    padding: 2rem 0;
+    color: var(--primary);
+}
+
+.carta-servizio {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    height: 100%;
+    color: #374151;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.carta-servizio:hover {
+    transform: translateY(-5px);
+}
+
+.carta-servizio h3 {
+    color: var(--primario);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
