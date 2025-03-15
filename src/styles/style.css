@@ -228,7 +228,7 @@ header .navbar .access-button span {
     font-weight: bold;
     box-shadow: 5px 5px 0 rgba(0,0,0,0.2);
     transition: transform 0.3s;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
 }
 
 .indirizzo-card:hover {
@@ -243,7 +243,7 @@ header .navbar .access-button span {
 
 .indirizzo-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
     text-align: center;
 }
 
@@ -276,7 +276,6 @@ header .navbar .access-button span {
   Servizi
 ---------------------------------------------*/
 .sezione-servizi {
-    padding: 2rem 0;
     color: var(--primary);
 }
 
@@ -298,4 +297,103 @@ header .navbar .access-button span {
     color: var(--primario);
     font-weight: 700;
     margin-bottom: 1rem;
+}
+
+/* Footer */
+.piede-pagina {
+    background-color: var(--primary);
+    color: white;
+    padding: 4rem 0 0;
+}
+
+.piede-pagina h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.piede-pagina h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent2);
+}
+
+.piede-pagina ul.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.piede-pagina ul.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.piede-pagina a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.piede-pagina a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.piede-pagina address p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.piede-pagina address p i {
+    min-width: 20px;
+}
+
+.copyright {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+/* Responsive fixes */
+@media (max-width: 767px) {
+    .piede-pagina {
+        padding: 3rem 0 0;
+        text-align: center;
+    }
+    
+    .piede-pagina h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .piede-pagina a:hover {
+        transform: none;
+    }
+    
+    .piede-pagina ul.footer-links {
+        margin-bottom: 2rem;
+    }
+    
+    .piede-pagina address p {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .piede-pagina {
+        padding: 3rem 0 0;
+    }
+    
+    .piede-pagina h3 {
+        font-size: 1.1rem;
+    }
 }
