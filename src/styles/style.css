@@ -162,6 +162,7 @@ header .navbar .access-button span {
     top: 60%;
     transform: translate(-50%, -50%);
     background-color: var(--primary);
+    border-radius: 30px;
     color: white;
     padding: 2rem;
     width: 100%;
@@ -299,7 +300,9 @@ header .navbar .access-button span {
     margin-bottom: 1rem;
 }
 
-/* Footer */
+/*---------------------------------------------
+  Footer
+---------------------------------------------*/
 .piede-pagina {
     background-color: var(--primary);
     color: white;
@@ -395,5 +398,60 @@ header .navbar .access-button span {
     
     .piede-pagina h3 {
         font-size: 1.1rem;
+    }
+}
+
+
+/* Fissa l'altezza del carosello */
+.carousel-fixed-height {
+    min-height: 350px; /* Altezza minima per desktop */
+}
+
+/* Card con altezza fissa e flex per posizionare il bottone in basso */
+.news-card {
+    display: flex;
+    flex-direction: column;
+    height: 300px; /* Altezza fissa per le card */
+    margin-top: 10px;
+    position: relative;
+}
+
+/* Contenuto con scrollbar se necessario */
+.news-content {
+    overflow-y: auto;
+    max-height: 180px; /* Limita l'altezza massima del contenuto */
+    margin-bottom: 15px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    opacity: 1;
+}
+
+.carousel-indicators {
+    margin-bottom: 0;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+@media (max-width: 767px) {
+    .carousel-fixed-height {
+        min-height: auto; /* Su mobile l'altezza si adatta */
+    }
+    
+    .news-card {
+        height: auto;
+        min-height: 250px; /* Altezza minima per mobile */
+        margin-bottom: 15px;
+    }
+    
+    .news-content {
+        max-height: 150px;
     }
 }
